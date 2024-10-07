@@ -1,6 +1,10 @@
 const jsx = (tag, props) => {
-    console.log("ok", tag, props)
-    return null
+  let children = null
+  if(props !== null)
+    children = props.children;
+  if (typeof tag === "function")
+    return tag(props, children);
+  return null
 }
   
 module.exports = {jsx}
