@@ -12,17 +12,19 @@ const Get = (props) => {
 const Routes = (props) => {
 }
 
+const App = (props) => {
+  props.app.listen(props.port, props.do)
+}
+
 // TODO passer props aux enfants
-<Routes>
-  <Get app={app} resource='/' do={(req, res) => {
-    res.send('Hello World!')
-  }}/>
-</Routes>
-
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+<App 
+  app={app}
+  port={port}
+  do = {() => console.log(`Example app listening on port ${port}`)}
+>
+  <Routes>
+    <Get app={app} resource='/' do={(req, res) => {
+      res.send('Hello World!')
+    }}/>
+  </Routes>
+</App>
