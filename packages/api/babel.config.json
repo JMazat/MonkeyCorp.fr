@@ -1,0 +1,22 @@
+{
+    "presets": [
+        [
+        "@babel/preset-env",
+        {
+            "useBuiltIns": "entry",
+            "corejs": "3.38.122",
+            "targets":{
+            "node": 20
+            },
+            "modules":"commonjs"
+        }
+        ],
+        [
+        "@babel/preset-react",
+        {
+            "pragma": "require('./jsx/runtime').jsx",
+            "pragmaFrag": "require('./jsx/runtime').frag"
+        }
+        ]
+    ]
+}

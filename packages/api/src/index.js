@@ -1,5 +1,7 @@
 // //TODO
-const express = require('express')
+// import 'core-js'  // peut etre important (https://babeljs.io/docs/babel-preset-env#corejs)
+
+import express from 'express'
 const app = express()
 const port = 5000
 

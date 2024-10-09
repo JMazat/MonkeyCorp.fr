@@ -1,4 +1,4 @@
-const jsx = (tag, props) => {
+export const jsx = (tag, props) => {
   let children = null
   if(props !== null)
     children = props.children;
@@ -6,5 +6,7 @@ const jsx = (tag, props) => {
     return tag(props, children);
   return null
 }
-  
-module.exports = {jsx}
+
+export const frag = (tag, props) => {
+  throw Error("Not implemented: Do not use Fragments for now.")
+}
