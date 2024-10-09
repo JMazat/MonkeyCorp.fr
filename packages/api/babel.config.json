@@ -18,5 +18,7 @@
             "pragmaFrag": "require('./jsx/runtime').frag"
         }
         ]
-    ]
+    ],
+    "sourceMaps": "inline",
+    "retainLines": true
 }
