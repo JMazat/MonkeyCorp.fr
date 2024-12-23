@@ -1,5 +1,5 @@
 import BaseSql, { BaseRow } from "./BaseSql.ts";
-import Country from '../model/Country.ts'
+import Country from '@model/Country.ts'
 import { Connection } from "mysql2/promise";
 import { ImageAggregRow } from "./AggregationsSql.ts";
 

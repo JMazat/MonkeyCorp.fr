@@ -1,5 +1,5 @@
 import { Connection } from "mysql2/promise"
-import Fight from "../model/Fight.ts"
+import Fight from "@model/Fight.ts"
 import BaseSql from "./BaseSql.ts"
 import { BaseRow } from "./BaseSql.ts"
 import { ImageAggregRow, ParagraphAggregRow, PersonAggregRow } from "./AggregationsSql.ts"

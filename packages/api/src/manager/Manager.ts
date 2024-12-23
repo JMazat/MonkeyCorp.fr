@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import BaseSql from "../sql/BaseSql.ts";
+import BaseSql from "@sql/BaseSql.ts";
 
 export default class Manager<T extends BaseSql<any,any>>
 {

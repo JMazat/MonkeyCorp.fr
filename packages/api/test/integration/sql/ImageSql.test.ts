@@ -1,8 +1,8 @@
 import { afterAll, beforeAll, describe, it } from '@jest/globals';
 import { Connection } from 'mysql2/promise';
-import Helper from '../Helper';
-import ImageSql from '../../../src/sql/ImageSql.ts'
-import { ImageObjects } from '../../TestObjects.ts';
+import Helper from '@test/Helper';
+import ImageSql from '@sql/ImageSql.ts'
+import { ImageObjects } from '@test/TestObjects.ts';
 
 let db: Connection
 
@@ -21,7 +21,7 @@ describe('ImageSql', () => {
                 const imageSql = new ImageSql(db)
                 const images = await imageSql.findByIds([2, 3])
 
-                Helper.expectArray(images, [ImageObjects.minimal, ImageObjects.simple])
+                Helper.expectArraySql(images, [ImageObjects.minimal, ImageObjects.simple])
             })
         })
     })

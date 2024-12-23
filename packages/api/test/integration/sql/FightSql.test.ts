@@ -1,8 +1,8 @@
 import { beforeAll, afterAll, describe, it, expect } from "@jest/globals"
-import FightSql from "../../../src/sql/FightSql.ts"
-import Helper from "../Helper.ts"
+import FightSql from "@sql/FightSql.ts"
+import Helper from "@test/Helper.ts"
 import { Connection } from "mysql2/promise"
-import { FightObjects } from "../../TestObjects.ts"
+import { FightObjects } from "@test/TestObjects.ts"
 
 let db: Connection 
 
@@ -29,7 +29,7 @@ describe('FightSql', () => {
                 const fightSql = new FightSql(db)
                 const fight = await fightSql.findById(1)
 
-                Helper.expectMatch(fight, FightObjects.minimal)
+                Helper.expectMatchSql(fight, FightObjects.minimal)
             })
         })
     })

@@ -1,5 +1,5 @@
 import { Connection } from "mysql2/promise";
-import History from "../model/History.ts";
+import History from "@model/History.ts";
 import { ImageAggregRow, ParagraphAggregRow } from "./AggregationsSql.ts";
 import BaseSql, { BaseRow as BaseRow } from "./BaseSql.ts";
 

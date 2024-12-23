@@ -1,5 +1,5 @@
 import { Connection } from "mysql2/promise";
-import Paragraph from "../model/Paragraph.ts";
+import Paragraph from "@model/Paragraph.ts";
 import BaseSql, { BaseRow } from "./BaseSql.ts";
 
 interface ParagraphRow extends BaseRow

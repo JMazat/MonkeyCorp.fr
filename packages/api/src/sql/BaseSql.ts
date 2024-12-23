@@ -1,10 +1,10 @@
 import { FieldPacket, Connection, RowDataPacket } from "mysql2/promise";
-import NotImplementedError from "../error/NotImplementedError.ts";
-import SqlQueryError from '../error/SqlQueryError.ts'
-import { BaseModel } from "../model/BaseModel.ts";
+import NotImplementedError from "@error/NotImplementedError.ts";
+import SqlQueryError from '@error/SqlQueryError.ts'
+import { BaseModel } from "@model/BaseModel.ts";
 import { ImageAggregRow, ParagraphAggregRow, PersonAggregRow } from "./AggregationsSql.ts";
-import { ImageAggreg, ParagraphAggreg, PersonAggreg } from "../model/Aggregations.ts";
-import ImplementationError from "../error/ImplementationError.ts";
+import { ImageAggreg, ParagraphAggreg, PersonAggreg } from "@model/Aggregations.ts";
+import ImplementationError from "@error/ImplementationError.ts";
 
 export interface BaseRow extends RowDataPacket
 {

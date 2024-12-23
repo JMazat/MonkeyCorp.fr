@@ -1,9 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, jest } from "@jest/globals";
-import AboutSql from '../../../src/sql/AboutSql'
-import ManagerFactory from '../../../src/manager/ManagerFactory'
-import SqlConnection from "../../../src/SqlConnection";
-import Helper from "../../Helper";
-import About from "../../../src/model/About";
+import AboutSql from '@sql/AboutSql'
+import ManagerFactory from '@manager/ManagerFactory'
+import SqlConnection from "@SqlConnection";
+import Helper from "@test/Helper";
+import About from "@model/About";
 
 let req: any, res: any, findById: any
 beforeEach(() => {

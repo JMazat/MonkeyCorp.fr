@@ -1,5 +1,5 @@
 import { Connection } from "mysql2/promise";
-import News from "../model/News.ts";
+import News from "@model/News.ts";
 import { ParagraphAggregRow, ImageAggregRow, PersonAggregRow } from "./AggregationsSql.ts";
 import BaseSql, { BaseRow } from "./BaseSql.ts";
 

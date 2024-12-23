@@ -1,8 +1,8 @@
 import { beforeAll, afterAll, describe, it, expect } from "@jest/globals"
-import CountrySql from "../../../src/sql/CountrySql.ts"
-import Helper from "../Helper.ts"
+import CountrySql from "@sql/CountrySql.ts"
+import Helper from "@test/Helper.ts"
 import { Connection } from "mysql2/promise"
-import { CountryObjects } from "../../TestObjects.ts"
+import { CountryObjects } from "@test/TestObjects.ts"
 
 let db: Connection
 
@@ -29,7 +29,7 @@ describe('CountrySql', () => {
                 const countrySql = new CountrySql(db)
                 const country = await countrySql.findById(1)
 
-                Helper.expectMatch(country, CountryObjects.minimal)
+                Helper.expectMatchSql(country, CountryObjects.minimal)
             })
         })
     })

@@ -1,7 +1,7 @@
 import { Connection } from "mysql2/promise";
-import BaseSql from "../sql/BaseSql.ts";
-import Manager from "./Manager.ts";
-import SqlConnection from "../SqlConnection.ts";
+import BaseSql from "@sql/BaseSql.ts";
+import Manager from "@manager/Manager.ts";
+import SqlConnection from "@SqlConnection.ts";
 
 export default abstract class ManagerFactory
 {

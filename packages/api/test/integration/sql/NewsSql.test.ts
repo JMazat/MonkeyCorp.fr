@@ -1,8 +1,8 @@
 import { beforeAll, afterAll, describe, it } from "@jest/globals"
 import { Connection } from "mysql2/promise"
-import Helper from "../Helper"
-import NewsSql from '../../../src/sql/NewsSql.ts'
-import { NewsObjects } from "../../TestObjects.ts"
+import Helper from "@test/Helper"
+import NewsSql from '@sql/NewsSql.ts'
+import { NewsObjects } from "@test/TestObjects.ts"
 
 let db: Connection
 
@@ -20,7 +20,7 @@ describe('NewsSql', () => {
             const newsSql = new NewsSql(db)
             const news = await newsSql.findAll()
 
-            Helper.expectArray(news, NewsObjects.all)
+            Helper.expectArraySql(news, NewsObjects.all)
         })
     })
 })

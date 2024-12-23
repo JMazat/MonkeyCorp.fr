@@ -1,14 +1,15 @@
 import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals';
-import BaseSql from '../../../src/sql/BaseSql';
-import { BaseSqlObjects } from '../../TestObjects';
-import Helper from '../../Helper';
-import Manager from '../../../src/manager/Manager';
+import BaseSql from '@sql/BaseSql';
+import { BaseSqlObjects } from '@test/TestObjects';
+import Helper from '@test/Helper';
+import Manager from '@manager/Manager';
 
 let res: any
 beforeEach(() => {
     jest.spyOn(BaseSql.prototype, 'findById')
         .mockImplementation(async(id: number) => {
             if(id == 0) return BaseSqlObjects.minimal
+            throw `Wrong parameters in mock: BaseSql.findByid: ${id}`
         })
     jest.spyOn(BaseSql.prototype, 'findByIds')
         .mockImplementation(async(ids: number[]) => {

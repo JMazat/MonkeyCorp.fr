@@ -1,5 +1,5 @@
 import BaseSql, { BaseRow } from "./BaseSql.ts"
-import About from '../model/About.ts'
+import About from '@model/About.ts'
 import { Connection } from "mysql2/promise"
 import { ImageAggregRow, ParagraphAggregRow } from './AggregationsSql.ts'
 

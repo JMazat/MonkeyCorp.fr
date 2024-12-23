@@ -1,9 +1,9 @@
 import { beforeAll, afterAll, describe, it } from '@jest/globals'
-import AboutSql from '../../../src/sql/AboutSql.ts'
-import Helper from '../Helper.ts'
+import AboutSql from '@sql/AboutSql.ts'
+import Helper from '@test/Helper.ts'
 import { Connection } from 'mysql2/promise'
 import { expect } from '@jest/globals'
-import { AboutObjects } from '../../TestObjects.ts'
+import { AboutObjects } from '@test/TestObjects.ts'
 
 let db: Connection
 
@@ -30,7 +30,7 @@ describe('AboutSql', () => {
                 const aboutSql = new AboutSql(db)
                 const about = await aboutSql.findById(1)
 
-                Helper.expectMatch(about, AboutObjects.minimal)
+                Helper.expectMatchSql(about, AboutObjects.minimal)
             })
         })
         describe('and the key is: 2', () => {
@@ -38,7 +38,7 @@ describe('AboutSql', () => {
                 const aboutSql = new AboutSql(db)
                 const about = await aboutSql.findById(2)
 
-                Helper.expectMatch(about, AboutObjects.small)
+                Helper.expectMatchSql(about, AboutObjects.small)
             })
         })
     })

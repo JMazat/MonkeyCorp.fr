@@ -5,6 +5,7 @@
 
     "noEmit": true,
     "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
 
     "preserveSymlinks": true,
 
@@ -12,7 +13,13 @@
     "lib": ["ES2022"],
 
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+
+    "rootDirs": ["./src", "./test"],
+    "paths": {
+      "@*": ["./src/*"],
+      "@test/*": ["./test/*"]
+    }
   },
   "exclude": [
     "test/*"

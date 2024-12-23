@@ -1,5 +1,5 @@
 import { Connection } from "mysql2/promise";
-import Image from "../model/Image.ts";
+import Image from "@model/Image.ts";
 import BaseSql, { BaseRow } from "./BaseSql.ts";
 
 interface ImageRow extends BaseRow

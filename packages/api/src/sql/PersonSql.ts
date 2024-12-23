@@ -1,5 +1,5 @@
 import { Connection } from "mysql2/promise";
-import Person, { Gender } from "../model/Person.ts";
+import Person, { Gender } from "@model/Person.ts";
 import BaseSql, { BaseRow } from "./BaseSql.ts";
 
 interface PersonRow extends BaseRow

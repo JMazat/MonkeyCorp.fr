@@ -1,8 +1,8 @@
 import { beforeAll, afterAll, describe, it } from "@jest/globals"
 import { Connection } from "mysql2/promise"
-import Helper from "../Helper"
-import ParagraphSql from '../../../src/sql/ParagraphSql.ts'
-import { ParagraphObjects } from "../../TestObjects.ts"
+import Helper from "@test/Helper"
+import ParagraphSql from '@sql/ParagraphSql.ts'
+import { ParagraphObjects } from "@test/TestObjects.ts"
 
 let db: Connection
 
@@ -21,7 +21,7 @@ describe('ParagraphSql', () => {
                 const paragraphSql = new ParagraphSql(db)
                 const paragraphs = await paragraphSql.findByIds([2])
 
-                Helper.expectArray(paragraphs, [ParagraphObjects.minimal])
+                Helper.expectArraySql(paragraphs, [ParagraphObjects.minimal])
             })
         })
      })

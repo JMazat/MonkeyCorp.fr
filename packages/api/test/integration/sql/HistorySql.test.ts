@@ -1,9 +1,9 @@
 import { beforeAll, afterAll, it } from "@jest/globals";
 import { Connection } from "mysql2/promise";
-import Helper from "../Helper";
+import Helper from "@test/Helper";
 import { describe } from "@jest/globals";
-import HistorySql from '../../../src/sql/HistorySql.ts'
-import { HistoryObjects } from "../../TestObjects.ts";
+import HistorySql from '@sql/HistorySql.ts'
+import { HistoryObjects } from "@test/TestObjects.ts";
 
 let db: Connection
 
@@ -21,7 +21,7 @@ describe('HistorySql', () => {
             const historySql = new HistorySql(db)
             const histories = await historySql.findAll()
 
-            Helper.expectArray(histories, HistoryObjects.all)
+            Helper.expectArraySql(histories, HistoryObjects.all)
         })
     })
 })
