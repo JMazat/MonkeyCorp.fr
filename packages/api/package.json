@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "unit": "jest --roots ./test/unit",
+    "unit": "jest ./test/unit",
     "serve": "echo \"Unavailable for TS\" && exit 1 && nodemon src/index.js",
     "start": "npx node --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' src/index.ts"
   },

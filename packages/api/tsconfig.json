@@ -15,13 +15,10 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
 
-    "rootDirs": ["./src", "./test"],
+    "rootDirs": ["./src"],
     "paths": {
-      "@*": ["./src/*"],
-      "@test/*": ["./test/*"]
+      "@*": ["./src/*"]
     }
   },
-  "exclude": [
-    "test/*"
-  ]
+  "exclude": ["node_modules", "coverage", "test"]
 }
