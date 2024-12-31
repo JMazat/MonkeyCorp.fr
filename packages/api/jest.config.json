@@ -2,9 +2,8 @@
     "preset": "ts-jest",
     "testEnvironment": "node",
 
-    "roots": ["<rootDir>/test"],
     "moduleFileExtensions": ["js", "ts", "tsx"],
-    "moduleDirectories": ["node_modules", "<rootDir>"],
+    "modulePaths": ["<rootDir>"],
     "moduleNameMapper": {
         "^@jest(.*)$": "@jest$1",
         "^@babel(.*)$": "@babel$1",
